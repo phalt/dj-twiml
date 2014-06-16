@@ -1,0 +1,47 @@
+[
+  {
+    "pk": 1,
+    "model": "dj_twiml.twiml",
+    "fields": {
+      "name": "First twiml snippet",
+      "description": "First Twiml description",
+      "content": "<Response><Dial>+440123456789</Dial></Response>"
+    }
+  },
+  {
+    "pk": 2,
+    "model": "dj_twiml.twiml",
+    "fields": {
+      "name": "Second twiml snippet",
+      "description": "Second Twiml description",
+      "content": "<Response><Message>Ahoy hoy!</Message></Response>"
+    }
+  },
+  {
+    "pk": 3,
+    "model": "dj_twiml.twiml",
+    "fields": {
+      "name": "Broken twiml snippet",
+      "description": "Broken Twiml description",
+      "content": "<Response><Dial>+440123456789</Response>"
+    }
+  },
+  {
+    "pk": 4,
+    "model": "dj_twiml.twiml",
+    "fields": {
+      "name": "Empty twiml snippet",
+      "description": "Empty Twiml description",
+      "content": "<Response />"
+    }
+  },
+  {
+    "pk": 5,
+    "model": "dj_twiml.twiml",
+    "fields": {
+      "name": "Actual empty twiml snippet",
+      "description": "Actual empty Twiml description",
+      "content": ""
+    }
+  }
+]
