@@ -29,7 +29,7 @@ setup(
     description="""Create Twilio TwiML views in Django""",
     long_description=readme + '\n\n' + history,
     author='Paul Hallett',
-    author_email='hello@phalt.co',
+    author_email='paul@twilio.com',
     url='https://github.com/phalt/dj-twiml-views',
     packages=[
         'dj_twiml',
@@ -39,7 +39,7 @@ setup(
     ],
     license="BSD",
     zip_safe=False,
-    keywords='dj-twiml-views',
+    keywords='django, twilio, twiml, telephony',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Framework :: Django',
@@ -49,7 +49,5 @@ setup(
         "Programming Language :: Python :: 2",
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.3',
     ],
 )
