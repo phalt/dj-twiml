@@ -26,7 +26,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 setup(
     name='dj-twiml-views',
     version=version,
-    description="""Create static Twilio TwiML views in Django""",
+    description="""Create Twilio TwiML views in Django""",
     long_description=readme + '\n\n' + history,
     author='Paul Hallett',
     author_email='hello@phalt.co',

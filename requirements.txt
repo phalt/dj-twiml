@@ -1,3 +1,4 @@
-django>=1.5.1
+django>=1.6.1
 wheel==0.22.0
-# Additional requirements go here
+django-twilio>=0.5.2
+South==0.8.4
