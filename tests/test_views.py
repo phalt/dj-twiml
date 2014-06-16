@@ -11,12 +11,12 @@ Tests for `dj-twiml-views` views module.
 
 import os
 import shutil
-import unittest
+from django.test import TestCase
 
 from dj_twiml import views
 
 
-class TestDj_twiml(unittest.TestCase):
+class TestDj_twiml(TestCase):
     fixtures = ['dj_twiml.json']
 
     def test_something(self):
