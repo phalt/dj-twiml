@@ -33,7 +33,7 @@ test-all:
 	tox
 
 coverage:
-	coverage run --source dj-twiml-views setup.py test
+	coverage run --source dj_twiml runtests.py
 	coverage report -m
 	coverage html
 	open htmlcov/index.html

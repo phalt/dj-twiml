@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -11,8 +10,9 @@ Tests for `dj-twiml-views` models module.
 
 import os
 import shutil
-import unittest
 from django.test import TestCase
+
+from twilio.twiml import TwimlException
 
 from dj_twiml.models import Twiml
 
@@ -29,7 +29,12 @@ class TestDj_twiml(TestCase):
             self.assertIs(type(twiml.description), unicode)
             self.assertIs(type(twiml.content), unicode)
 
+    def test_unicode(self):
+        t0 = self.snippets[0]
+        self.assertEquals(t0.__unicode__(), 'First twiml snippet')
+
     def test_xml_conversion(self):
+        ''' Assert XML conversion comes out how we would like it to '''
         t1 = self.snippets[0]
         self.assertEquals(t1.name, 'First twiml snippet')
         xml = t1.xml_view()
@@ -37,5 +42,8 @@ class TestDj_twiml(TestCase):
             '<?xml version="1.0" encoding="UTF-8"?><Response><Dial>+440123456789</Dial></Response>',
             xml)
 
-    def tearDown(self):
-        pass
+    def test_bad_xml(self):
+        ''' Assert Bad xml raises the correc exception '''
+        t2 = self.snippets[2]
+        self.assertEqual(t2.name, 'Broken twiml snippet')
+        self.assertRaises(TwimlException, t2.xml_view)
