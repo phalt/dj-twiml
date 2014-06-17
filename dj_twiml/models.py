@@ -6,7 +6,6 @@ from xml.etree import ElementTree as ET
 
 class Twiml(models.Model):
 
-
     def __unicode__(self):
         return self.name
 
@@ -23,7 +22,7 @@ class Twiml(models.Model):
                 XML error if the content is not formatted correctly.
             '''
             try:
-                tt = ET.fromstring(self.content)
+                ET.fromstring(self.content)
             except:
                 raise TwimlException
             return '<?xml version="1.0" encoding="UTF-8"?>' + self.content
