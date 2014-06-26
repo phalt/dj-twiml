@@ -22,7 +22,9 @@ try:
         SITE_ID=1,
         NOSE_ARGS=['-s'],
         TWILIO_ACCOUNT_SID='',
-        TWILIO_AUTH_TOKEN=''
+        TWILIO_AUTH_TOKEN='',
+        DJANGO_TWILIO_FORGERY_PROTECTION=False
+
     )
 
     from django_nose import NoseTestSuiteRunner
