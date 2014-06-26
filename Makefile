@@ -16,6 +16,7 @@ clean: clean-build clean-pyc
 clean-build:
 	rm -fr build/
 	rm -fr dist/
+	rm -fr htmlcov/
 	rm -fr *.egg-info
 
 clean-pyc:
@@ -27,7 +28,7 @@ lint:
 	flake8 dj-twiml-views tests
 
 test:
-	python setup.py test
+	python runtests.py
 
 test-all:
 	tox
