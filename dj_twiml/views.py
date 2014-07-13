@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 from .models import Twiml
-from django_twilio.decorators import twilio_view
+from django.views.decorators.csrf import csrf_exempt
+from django.http import HttpResponse
 
 
-@twilio_view
+@csrf_exempt
 def detail(request, twiml_id):
     ''' Return the xml view for a twiml snippet '''
     twiml = Twiml.objects.get(id=twiml_id)
-    return twiml.xml_view()
+    return HttpResponse(twiml.xml_view(), content_type='text/xml')
