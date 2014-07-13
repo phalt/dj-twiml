@@ -4,5 +4,5 @@ import views
 
 urlpatterns = patterns(
     '',
-    url(r'^twiml/(?P<twiml_id>\d+)/$', views.detail, name='detail'),
+    url(r'^(?P<twiml_id>\d+)/$', views.detail, name='detail'),
 )
