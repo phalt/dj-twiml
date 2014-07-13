@@ -40,15 +40,33 @@ Quickstart
 
 Install dj-twiml-views::
 
-    pip install dj-twiml-views
+    pip install dj-twiml
 
 Then use it in a project::
 
-    import dj-twiml-views
+    import dj-twiml
+
+Add dj-twiml to your installed apps::
+
+    INSTALLED_APPS = {
+        ...,
+        'dj_twiml',
+    }
+
+and to your URLconf (urls.py)::
+
+    urlpatterns = patterns(
+        '',
+        url(r'^$', include('dj_twiml.urls')),
+        ...
+    )
+
+and finally set things up using South::
+
+    $ python manage.py migrate dj_twiml
+
 
 Features
 --------
 
 * Quickly build new or modify existing static TwiML snippets.
-
-* TODO
