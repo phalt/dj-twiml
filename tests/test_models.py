@@ -8,8 +8,6 @@ test_dj-twiml-views
 Tests for `dj-twiml-views` models module.
 """
 
-import os
-import shutil
 from django.test import TestCase
 
 from twilio.twiml import TwimlException
