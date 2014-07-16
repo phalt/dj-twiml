@@ -14,9 +14,9 @@ Create static Twilio TwiML views in Django
 About
 -----
 
-Often when building Twilio apps with Django, you want to quickly create a few simple static TwiML documents. You can usually do this by writing some code and linking it to a URL endpoint on your Django app.
+Often when building `Twilio <https://twilio.com>`_ apps with Django, you want to quickly create a few simple static `TwiML <https://twilio.com/docs/api/twiml>`_ documents. You can usually do this by writing a view and connecting it to a URL endpoint on your Django app.
 
-But what if you wanted to modify those documents? Or perhaps you don't have the means to push the updates to the live server straight away?
+But what if you wanted to modify those documents quickly later on? Or perhaps you don't have the means to push the updates to the live server straight away?
 
 dj-twiml-views lets you create and modify **static** TwiML documents in seconds, with a publicly addressable URL and correct XML formatting / validation.
 
@@ -36,7 +36,7 @@ Add dj-twiml to your installed apps::
         'dj_twiml',
     }
 
-and to your URLconf (urls.py)::
+and the URL routing to your URLconf (urls.py)::
 
     urlpatterns = patterns(
         '',
@@ -59,9 +59,11 @@ Usage
 
 .. image:: http://i.imgur.com/kA6hVYR.png
 
-3. Point a Twilio phone number to the new dj-twiml snippet
+3. Point a Twilio phone number to the new dj-twiml snippet:
 
 .. image:: http://i.imgur.com/YIzeZR3.png
+
+Get a new `Twilio trial account <https://twilio.com/try-twilio>`_ here.
 
 4. Ring it! Try calling **++442030952720** (UK) or **+1 844-707-9437** (USA) now :)
 
