@@ -7,7 +7,7 @@ from xml.etree import ElementTree as ET
 class Twiml(models.Model):
 
     def __unicode__(self):
-        return self.name
+        return ''.join(['/twiml/', unicode(self.id), '/'])
 
     name = models.CharField(max_length=100)
 

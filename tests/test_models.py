@@ -31,7 +31,7 @@ class TestDj_twiml(TestCase):
 
     def test_unicode(self):
         t0 = self.snippets[0]
-        self.assertEquals(t0.__unicode__(), 'First twiml snippet')
+        self.assertEquals(t0.__unicode__(), '/twiml/1/')
 
     def test_xml_conversion(self):
         ''' Assert XML conversion comes out how we would like it to '''
