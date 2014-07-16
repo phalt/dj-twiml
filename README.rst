@@ -25,18 +25,20 @@ This is perfect if you want static TwiML documents that do not require any compu
 Installation
 ------------
 
-Install dj-twiml-views::
+1. Install dj-twiml-views::
 
     pip install dj-twiml
 
-Add dj-twiml to your installed apps::
+2. Add dj-twiml to your installed apps in settings::
 
     INSTALLED_APPS = {
         ...,
         'dj_twiml',
     }
 
-and the URL routing to your URLconf (urls.py)::
+3. Dj-twiml will install `django_twilio <http://django-twilio.readthedocs.org/en/latest/install.html#installation>`_ for you, but you will also need to follow the django-twilio `installation instructions <http://django-twilio.readthedocs.org/en/latest/install.html#installation>`_ too.
+
+4. After setting up django-twilio, add the URL routing to your URLconf (urls.py)::
 
     urlpatterns = patterns(
         '',
@@ -44,7 +46,7 @@ and the URL routing to your URLconf (urls.py)::
         ...
     )
 
-and finally set things up using South::
+5. and finally set things up using South::
 
     $ python manage.py migrate dj_twiml
 
@@ -63,7 +65,7 @@ Usage
 
 .. image:: http://i.imgur.com/YIzeZR3.png
 
-Get a new `Twilio trial account <https://twilio.com/try-twilio>`_ here.
+(Get a new `Twilio trial account <https://twilio.com/try-twilio>`_ here.)
 
 4. Ring it! Try calling **++442030952720** (UK) or **+1 844-707-9437** (USA) now :)
 
@@ -72,3 +74,7 @@ Features
 --------
 
 * Quickly build new or modify existing static TwiML snippets.
+
+* Built on top of `django_twilio <https://github.com/rdegges/django-twilio>`_.
+
+* Comes complete with Django
