@@ -1,0 +1,3 @@
+[run]
+omit = dj_twiml/migrations*
+

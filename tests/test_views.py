@@ -44,5 +44,14 @@ class TestDj_twiml(TestCase):
         request = self.factory.post(
             self.t1_uri, HTTP_X_TWILIO_SIGNATURE=self.signature)
         deets = views.detail(request, twiml_id=1)
-        self.assertIn('<Response><Dial>', views.detail(request, twiml_id=1))
+
+        self.assertEquals(deets.status_code, 200)
+        self.assertEquals(
+            deets._headers['content-type'],
+            ('Content-Type', 'text/xml')
+        )
+        self.assertEquals(
+            deets._container,
+            [u'<?xml version="1.0" encoding="UTF-8"?><Response><Dial>+440123456789</Dial></Response>']
+        )
 
