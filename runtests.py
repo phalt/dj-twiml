@@ -21,8 +21,8 @@ try:
         ],
         SITE_ID=1,
         NOSE_ARGS=['-s'],
-        TWILIO_ACCOUNT_SID='',
-        TWILIO_AUTH_TOKEN='',
+        TWILIO_ACCOUNT_SID='axx',
+        TWILIO_AUTH_TOKEN='xxx',
         DJANGO_TWILIO_FORGERY_PROTECTION=False
 
     )
