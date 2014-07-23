@@ -11,13 +11,13 @@ Often when building [Twilio](https://twilio.com) apps with Django, you want to q
 
 But what if you wanted to modify those documents quickly later on? Or perhaps you don't have the means to push the updates to the live server straight away?
 
-dj-twiml-views lets you create and modify **static** TwiML documents in seconds, with a publicly addressable URL and correct XML formatting / validation.
+dj-twiml lets you create and modify **static** TwiML documents in seconds, with a publicly addressable URL and correct XML formatting / validation.
 
 This is perfect if you want static TwiML documents that do not require any computation, but might need modifying occassionally.
 
 ## Installation
 
-* Install dj-twiml-views
+* Install dj-twiml
 
 ```
     $ pip install dj-twiml
