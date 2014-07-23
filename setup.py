@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from os.path import abspath, dirname, join, normpath
 import sys
 
 import dj_twiml
@@ -20,28 +21,28 @@ if sys.argv[-1] == 'publish':
     print("  git push --tags")
     sys.exit()
 
-readme = open('README.md').read()
-history = open('HISTORY.rst').read().replace('.. :changelog:', '')
-
 setup(
     name='dj-twiml',
     version=version,
     description="""Create Twilio TwiML views in Django""",
-    long_description=readme + '\n\n' + history,
+    long_description=open(
+        normpath(join(dirname(abspath(__file__)), 'README.rst'))
+    ).read(),
     author='Paul Hallett',
     author_email='paul@twilio.com',
-    url='https://github.com/phalt/dj-twiml-views',
+    url='https://github.com/phalt/dj-twiml',
     packages=[
         'dj_twiml',
     ],
     include_package_data=True,
     install_requires=[
+        'django_twilio',
     ],
     license="BSD",
     zip_safe=False,
     keywords='django, twilio, twiml, telephony',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 4 - Beta',
         'Framework :: Django',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: BSD License',
