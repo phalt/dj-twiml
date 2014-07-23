@@ -20,11 +20,11 @@ if sys.argv[-1] == 'publish':
     print("  git push --tags")
     sys.exit()
 
-readme = open('README.rst').read()
+readme = open('README.md').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='dj-twiml-views',
+    name='dj-twiml',
     version=version,
     description="""Create Twilio TwiML views in Django""",
     long_description=readme + '\n\n' + history,
