@@ -75,6 +75,3 @@ Features
 * Supports both Django 1.7 and Django 1.6
 
 * Built on top of [django_twilio](https://github.com/rdegges/django-twilio).
-
-* Comes complete with Django
-
