@@ -1,7 +1,7 @@
 # DJ-TWIML
 
-![PyPI version](https://badge.fury.io/py/dj-twiml-views.png)
-![Downloads](https://pypip.in/d/dj-twiml-views/badge.png)
+![PyPI version](https://badge.fury.io/py/dj-twiml.png)
+![Downloads](https://pypip.in/d/dj-twiml/badge.png)
 
 Create and modify static Twilio TwiML views in Django
 

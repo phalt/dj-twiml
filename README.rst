@@ -2,11 +2,11 @@
 dj-twiml-views
 ==============
 
-.. image:: https://badge.fury.io/py/dj-twiml-views.png
-    :target: http://badge.fury.io/py/dj-twiml-views
+.. image:: https://badge.fury.io/py/dj-twiml.png
+    :target: http://badge.fury.io/py/dj-twiml
 
-.. image:: https://pypip.in/d/dj-twiml-views/badge.png
-    :target: https://crate.io/packages/dj-twiml-views?version=latest
+.. image:: https://pypip.in/d/dj-twiml/badge.png
+    :target: https://crate.io/packages/dj-twiml?version=latest
 
 
 Create static Twilio TwiML views in Django
