@@ -42,7 +42,7 @@ This is perfect if you want static TwiML documents that do not require any compu
     )
 ```
 
-5. and finally set things up using South::
+Finally, you can run the following command on Django 1.7 and Django 1.6 (with South installed) to setup the dj_twiml database models:
 
 ```
     $ python manage.py migrate dj_twiml
